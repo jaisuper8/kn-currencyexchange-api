@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "<dependency>",
+      "type": "java.lang.String",
+      "description": "Description for <dependency>."
+    },
+    {
+      "name": "listofString",
+      "type": "java.lang.String",
+      "description": "Description for listofString."
+    }
+  ] }

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="kn-MdmFICurrencyRateCurrencyRateType-V1-VS" targetNamespace="http://services.kuehne-nagel.com/wsdl/MasterData/FICurrencyRate/CurrencyRateType/V1" xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:ebxd="urn:ebx-schemas:deployment_1.0" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:impl="http://services.kuehne-nagel.com/wsdl/MasterData/FICurrencyRate/CurrencyRateType/V1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:audit="http://knesb.int.kn/xsd/esb/audit/v01" xmlns:doc="http://services.kuehne-nagel.com/xsd/MasterData/FICurrencyRate/CurrencyRateType/V1" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/04/secext" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:transaction="http://mdm-next.int.kn/xsd/transaction/v01">
+<wsdl:documentation>ESBDEV-5796</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema targetNamespace="http://schemas.xmlsoap.org/ws/2002/04/secext" xmlns="http://schemas.xmlsoap.org/ws/2002/04/secext">
+                  <xs:element name="Security" type="wsse:Security"/>
+                  <xs:complexType name="Security">
+                     <xs:sequence>
+                        <xs:element name="UsernameToken" type="wsse:UsernameToken"/>
+                     </xs:sequence>
+                  </xs:complexType>
+                  <xs:complexType name="UsernameToken">
+                     <xs:sequence>
+                        <xs:element name="Username" type="xs:string"/>
+                        <xs:element name="Password" type="xs:string"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://services.kuehne-nagel.com/xsd/MasterData/FICurrencyRate/CurrencyRateType/V1" xmlns="http://services.kuehne-nagel.com/xsd/MasterData/FICurrencyRate/CurrencyRateType/V1">
+                  <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="7de5e081-14fc-11ea-abfb-9bff49a056f6?xsd=xsd0"/>
+                  <xs:import namespace="http://schemas.xmlsoap.org/ws/2002/04/secext"/>
+                  <xs:import namespace="urn:ebx-schemas:deployment_1.0"/>
+                  <xs:attribute name="predicate" type="xs:string"/>
+                  <xs:element name="select_CurrencyRateType" type="select_CurrencyRateTypeRequestType"/>
+                  <xs:element name="select_CurrencyRateTypeResponse" type="select_CurrencyRateTypeResponseType"/>
+                  <xs:complexType name="CurrencyRateTypeType">
+                     <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="CurrencyRateType" nillable="true">
+                           <xs:complexType>
+                              <xs:sequence>
+                                 <xs:element minOccurs="0" name="currencyRateTypeId">
+                                    <xs:simpleType>
+                                       <xs:annotation>
+                                          <xs:documentation xml:lang="en-US">Currency Rate Type Id. Internal technical identifier Primary Key. minLength: 1. maxLength: 1000. </xs:documentation>
+                                       </xs:annotation>
+                                       <xs:restriction base="xs:string"/>
+                                    </xs:simpleType>
+                                 </xs:element>
+                                 <xs:element minOccurs="0" name="typeCode" nillable="true">
+                                    <xs:simpleType>
+                                       <xs:annotation>
+                                          <xs:documentation xml:lang="en-US">Type Code. Unique code representing used currency rates sources/types. The source could be an external provider e.g. OANDA or KN internal system e.g. ACON. maxLength: 10. </xs:documentation>
+                                       </xs:annotation>
+                                       <xs:restriction base="xs:string"/>
+                                    </xs:simpleType>
+                                 </xs:element>
+                                 <xs:element minOccurs="0" name="name" nillable="true">
+                                    <xs:simpleType>
+                                       <xs:annotation>
+                                          <xs:documentation xml:lang="en-US">Name. The name of the used currency rate types. maxLength: 40. </xs:documentation>
+                                       </xs:annotation>
+                                       <xs:restriction base="xs:string"/>
+                                    </xs:simpleType>
+                                 </xs:element>
+                                 <xs:element minOccurs="0" name="metaData" nillable="true">
+                                    <xs:complexType>
+                                       <xs:sequence>
+                                          <xs:element minOccurs="0" name="updatedBy" nillable="true">
+                                             <xs:simpleType>
+                                                <xs:annotation>
+                                                   <xs:documentation xml:lang="en-US">Updated By. The last user that changed the record</xs:documentation>
+                                                </xs:annotation>
+                                                <xs:restriction base="xs:string"/>
+                                             </xs:simpleType>
+                                          </xs:element>
+                                          <xs:element minOccurs="0" name="updatedOn" nillable="true">
+                                             <xs:simpleType>
+                                                <xs:annotation>
+                                                   <xs:documentation xml:lang="en-US">Updated On. The last date-time when record was updated</xs:documentation>
+                                                </xs:annotation>
+                                                <xs:restriction base="xs:dateTime"/>
+                                             </xs:simpleType>
+                                          </xs:element>
+                                          <xs:element minOccurs="0" name="createdBy" nillable="true">
+                                             <xs:simpleType>
+                                                <xs:annotation>
+                                                   <xs:documentation xml:lang="en-US">Created By. The user that created the record</xs:documentation>
+                                                </xs:annotation>
+                                                <xs:restriction base="xs:string"/>
+                                             </xs:simpleType>
+                                          </xs:element>
+                                          <xs:element minOccurs="0" name="createdOn" nillable="true">
+                                             <xs:simpleType>
+                                                <xs:annotation>
+                                                   <xs:documentation xml:lang="en-US">Created On. Date-time when record was created</xs:documentation>
+                                                </xs:annotation>
+                                                <xs:restriction base="xs:dateTime"/>
+                                             </xs:simpleType>
+                                          </xs:element>
+                                       </xs:sequence>
+                                    </xs:complexType>
+                                 </xs:element>
+                              </xs:sequence>
+                           </xs:complexType>
+                        </xs:element>
+                     </xs:sequence>
+                  </xs:complexType>
+                  <xs:complexType name="select_CurrencyRateTypeRequestType">
+                     <xs:sequence>
+                        <xs:element minOccurs="0" name="predicate">
+                           <xs:annotation>
+                              <xs:documentation xml:lang="en-US">Defines the predicate.</xs:documentation>
+                              <xs:documentation xml:lang="fr-FR">Précise le prédicat.</xs:documentation>
+                           </xs:annotation>
+                           <xs:simpleType>
+                              <xs:restriction base="xs:string"/>
+                           </xs:simpleType>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="pagination">
+                           <xs:complexType>
+                              <xs:sequence>
+                                 <xs:element minOccurs="0" name="previousPageLastRecordPredicate">
+                                    <xs:annotation>
+                                       <xs:documentation xml:lang="en-US">XPath predicate of the record to start with to get the next page.</xs:documentation>
+                                       <xs:documentation xml:lang="fr-FR">Prédicat XPath de l'enregistrement depuis lequel obtenir la page suivante.</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:simpleType>
+                                       <xs:restriction base="xs:string"/>
+                                    </xs:simpleType>
+                                 </xs:element>
+                                 <xs:element minOccurs="0" name="pageSize">
+                                    <xs:annotation>
+                                       <xs:documentation xml:lang="en-US">Page size.</xs:documentation>
+                                       <xs:documentation xml:lang="fr-FR">Taille de la page.</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:simpleType>
+                                       <xs:restriction base="xs:int">
+                                          <xs:minInclusive value="1"/>
+                                          <xs:maxInclusive value="1000"/>
+                                       </xs:restriction>
+                                    </xs:simpleType>
+                                 </xs:element>
+                              </xs:sequence>
+                           </xs:complexType>
+                        </xs:element>
+                     </xs:sequence>
+                  </xs:complexType>
+                  <xs:complexType name="select_CurrencyRateTypeResponseType">
+                     <xs:sequence>
+                        <xs:element name="data" type="CurrencyRateTypeType"/>
+                        <xs:element minOccurs="0" name="lastRecordPredicate">
+                           <xs:annotation>
+                              <xs:documentation xml:lang="en-US">XPath predicate of the record to start with to get the next page.</xs:documentation>
+                              <xs:documentation xml:lang="fr-FR">Prédicat XPath de l'enregistrement depuis lequel obtenir la page suivante.</xs:documentation>
+                           </xs:annotation>
+                           <xs:simpleType>
+                              <xs:restriction base="xs:string"/>
+                           </xs:simpleType>
+                        </xs:element>
+                     </xs:sequence>
+                  </xs:complexType>
+                  <xs:element name="StandardException">
+                     <xs:complexType>
+                        <xs:sequence>
+                           <xs:element name="code" nillable="false" type="xs:string"/>
+                           <xs:element name="label" nillable="false" type="xs:string"/>
+                           <xs:element name="description" nillable="false" type="xs:string"/>
+                        </xs:sequence>
+                     </xs:complexType>
+                  </xs:element>
+               </xs:schema>
+    <xs:schema>
+                  <xs:import namespace="http://knesb.int.kn/xsd/esb/audit/v01" schemaLocation="7de5e081-14fc-11ea-abfb-9bff49a056f6?xsd=xsd1"/>
+               </xs:schema>
+    <xs:schema>
+                  <xs:import namespace="http://mdm-next.int.kn/xsd/transaction/v01" schemaLocation="7de5e081-14fc-11ea-abfb-9bff49a056f6?xsd=xsd2"/>
+               </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="select_CurrencyRateTypeIn">
+    <wsdl:part name="parameters" element="doc:select_CurrencyRateType">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Security">
+    <wsdl:part name="Security" element="wsse:Security">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="select_CurrencyRateTypeOut">
+    <wsdl:part name="parameters" element="doc:select_CurrencyRateTypeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Transaction">
+    <wsdl:part name="Transaction" element="transaction:Transaction">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="StandardException">
+    <wsdl:part name="fault" element="doc:StandardException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Audit">
+    <wsdl:part name="Audit" element="audit:Audit">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ebx-dataservices">
+    <wsdl:operation name="select_CurrencyRateTypeOperation">
+<wsdl:documentation>
+                     <en_US xmlns="http://ws.apache.org/ns/synapse">This operation reads records in table CurrencyRateType.</en_US>
+                     <fr_FR xmlns="http://ws.apache.org/ns/synapse">Cette opération lit des enregistrements dans la table CurrencyRateType.</fr_FR>
+                  </wsdl:documentation>
+      <wsdl:input message="impl:select_CurrencyRateTypeIn">
+    </wsdl:input>
+      <wsdl:output message="impl:select_CurrencyRateTypeOut">
+    </wsdl:output>
+      <wsdl:fault name="StandardException" message="impl:StandardException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FICurrencyRateCurrencyRateType" type="impl:ebx-dataservices">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="select_CurrencyRateTypeOperation">
+      <soap:operation soapAction="select" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+        <soap:header message="impl:Security" part="Security" use="literal">
+        </soap:header>
+        <soap:header message="impl:Audit" part="Audit" use="literal">
+        </soap:header>
+        <soap:header message="impl:Transaction" part="Transaction" use="literal">
+        </soap:header>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="StandardException">
+        <soap:fault name="StandardException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="kn-MdmFICurrencyRateCurrencyRateType-V1-VS">
+    <wsdl:port name="kn-MdmFICurrencyRateCurrencyRateType-V1-VSsoaphttp" binding="impl:FICurrencyRateCurrencyRateType">
+      <soap:address location="http://esb.int.kn:8888/ws/kn-MdmFICurrencyRateCurrencyRateType-V1-VS/1.0"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

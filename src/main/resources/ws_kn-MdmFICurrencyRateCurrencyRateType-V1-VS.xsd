@@ -1,0 +1,338 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:osd="urn:ebx-schemas:common_1.0"
+           attributeFormDefault="unqualified"
+           elementFormDefault="unqualified"
+           targetNamespace="urn:ebx-schemas:common_1.0">
+   <xs:simpleType name="locale">
+      <xs:restriction base="xs:string">
+         <xs:enumeration osd:label="Arabic" value="ar"/>
+         <xs:enumeration osd:label="Arabic (United Arab Emirates)" value="ar_AE"/>
+         <xs:enumeration osd:label="Arabic (Bahrain)" value="ar_BH"/>
+         <xs:enumeration osd:label="Arabic (Algeria)" value="ar_DZ"/>
+         <xs:enumeration osd:label="Arabic (Egypt)" value="ar_EG"/>
+         <xs:enumeration osd:label="Arabic (Iraq)" value="ar_IQ"/>
+         <xs:enumeration osd:label="Arabic (Jordan)" value="ar_JO"/>
+         <xs:enumeration osd:label="Arabic (Kuwait)" value="ar_KW"/>
+         <xs:enumeration osd:label="Arabic (Lebanon)" value="ar_LB"/>
+         <xs:enumeration osd:label="Arabic (Libya)" value="ar_LY"/>
+         <xs:enumeration osd:label="Arabic (Morocco)" value="ar_MA"/>
+         <xs:enumeration osd:label="Arabic (Oman)" value="ar_OM"/>
+         <xs:enumeration osd:label="Arabic (Qatar)" value="ar_QA"/>
+         <xs:enumeration osd:label="Arabic (Saudi Arabia)" value="ar_SA"/>
+         <xs:enumeration osd:label="Arabic (Sudan)" value="ar_SD"/>
+         <xs:enumeration osd:label="Arabic (Syria)" value="ar_SY"/>
+         <xs:enumeration osd:label="Arabic (Tunisia)" value="ar_TN"/>
+         <xs:enumeration osd:label="Arabic (Yemen)" value="ar_YE"/>
+         <xs:enumeration osd:label="Byelorussian" value="be"/>
+         <xs:enumeration osd:label="Byelorussian (Belarus)" value="be_BY"/>
+         <xs:enumeration osd:label="Bulgarian" value="bg"/>
+         <xs:enumeration osd:label="Bulgarian (Bulgaria)" value="bg_BG"/>
+         <xs:enumeration osd:label="Catalan" value="ca"/>
+         <xs:enumeration osd:label="Catalan (Spain)" value="ca_ES"/>
+         <xs:enumeration osd:label="Catalan (Spain,Euro)" value="ca_ES_EURO"/>
+         <xs:enumeration osd:label="Czech" value="cs"/>
+         <xs:enumeration osd:label="Czech (Czech Republic)" value="cs_CZ"/>
+         <xs:enumeration osd:label="Danish" value="da"/>
+         <xs:enumeration osd:label="Danish (Denmark)" value="da_DK"/>
+         <xs:enumeration osd:label="German" value="de"/>
+         <xs:enumeration osd:label="German (Austria)" value="de_AT"/>
+         <xs:enumeration osd:label="German (Austria,Euro)" value="de_AT_EURO"/>
+         <xs:enumeration osd:label="German (Switzerland)" value="de_CH"/>
+         <xs:enumeration osd:label="German (Germany)" value="de_DE"/>
+         <xs:enumeration osd:label="German (Germany,Euro)" value="de_DE_EURO"/>
+         <xs:enumeration osd:label="German (Luxembourg)" value="de_LU"/>
+         <xs:enumeration osd:label="German (Luxembourg,Euro)" value="de_LU_EURO"/>
+         <xs:enumeration osd:label="Greek" value="el"/>
+         <xs:enumeration osd:label="Greek (Greece)" value="el_GR"/>
+         <xs:enumeration osd:label="English" value="en"/>
+         <xs:enumeration osd:label="English (Australia)" value="en_AU"/>
+         <xs:enumeration osd:label="English (Belgium)" value="en_BE"/>
+         <xs:enumeration osd:label="English (Belgium,Euro)" value="en_BE_EURO"/>
+         <xs:enumeration osd:label="English (Canada)" value="en_CA"/>
+         <xs:enumeration osd:label="English (United Kingdom)" value="en_GB"/>
+         <xs:enumeration osd:label="English (Ireland)" value="en_IE"/>
+         <xs:enumeration osd:label="English (Ireland,Euro)" value="en_IE_EURO"/>
+         <xs:enumeration osd:label="English (New Zealand)" value="en_NZ"/>
+         <xs:enumeration osd:label="English (United States)" value="en_US"/>
+         <xs:enumeration osd:label="English (South Africa)" value="en_ZA"/>
+         <xs:enumeration osd:label="Spanish" value="es"/>
+         <xs:enumeration osd:label="Spanish (Argentina)" value="es_AR"/>
+         <xs:enumeration osd:label="Spanish (Bolivia)" value="es_BO"/>
+         <xs:enumeration osd:label="Spanish (Chile)" value="es_CL"/>
+         <xs:enumeration osd:label="Spanish (Colombia)" value="es_CO"/>
+         <xs:enumeration osd:label="Spanish (Costa Rica)" value="es_CR"/>
+         <xs:enumeration osd:label="Spanish (Dominican Republic)" value="es_DO"/>
+         <xs:enumeration osd:label="Spanish (Ecuador)" value="es_EC"/>
+         <xs:enumeration osd:label="Spanish (Spain)" value="es_ES"/>
+         <xs:enumeration osd:label="Spanish (Spain,Euro)" value="es_ES_EURO"/>
+         <xs:enumeration osd:label="Spanish (Guatemala)" value="es_GT"/>
+         <xs:enumeration osd:label="Spanish (Honduras)" value="es_HN"/>
+         <xs:enumeration osd:label="English (India)" value="en_IN"/>
+         <xs:enumeration osd:label="Spanish (Mexico)" value="es_MX"/>
+         <xs:enumeration osd:label="Spanish (Nicaragua)" value="es_NI"/>
+         <xs:enumeration osd:label="Spanish (Panama)" value="es_PA"/>
+         <xs:enumeration osd:label="Spanish (Peru)" value="es_PE"/>
+         <xs:enumeration osd:label="Spanish (Puerto Rico)" value="es_PR"/>
+         <xs:enumeration osd:label="Spanish (Paraguay)" value="es_PY"/>
+         <xs:enumeration osd:label="Spanish (El Salvador)" value="es_SV"/>
+         <xs:enumeration osd:label="Spanish (United States)" value="es_US"/>
+         <xs:enumeration osd:label="Spanish (Uruguay)" value="es_UY"/>
+         <xs:enumeration osd:label="Spanish (Venezuela)" value="es_VE"/>
+         <xs:enumeration osd:label="Estonian" value="et"/>
+         <xs:enumeration osd:label="Estonian (Estonia)" value="et_EE"/>
+         <xs:enumeration osd:label="Finnish" value="fi"/>
+         <xs:enumeration osd:label="Finnish (Finland)" value="fi_FI"/>
+         <xs:enumeration osd:label="Finnish (Finland,Euro)" value="fi_FI_EURO"/>
+         <xs:enumeration osd:label="French" value="fr"/>
+         <xs:enumeration osd:label="French (Belgium)" value="fr_BE"/>
+         <xs:enumeration osd:label="French (Belgium,Euro)" value="fr_BE_EURO"/>
+         <xs:enumeration osd:label="French (Canada)" value="fr_CA"/>
+         <xs:enumeration osd:label="French (Switzerland)" value="fr_CH"/>
+         <xs:enumeration osd:label="French (France)" value="fr_FR"/>
+         <xs:enumeration osd:label="French (France,Euro)" value="fr_FR_EURO"/>
+         <xs:enumeration osd:label="French (Luxembourg)" value="fr_LU"/>
+         <xs:enumeration osd:label="French (Luxembourg,Euro)" value="fr_LU_EURO"/>
+         <xs:enumeration osd:label="Hindi (India)" value="hi_IN"/>
+         <xs:enumeration osd:label="Croatian" value="hr"/>
+         <xs:enumeration osd:label="Croatian (Croatia)" value="hr_HR"/>
+         <xs:enumeration osd:label="Hungarian" value="hu"/>
+         <xs:enumeration osd:label="Hungarian (Hungary)" value="hu_HU"/>
+         <xs:enumeration osd:label="Icelandic" value="is"/>
+         <xs:enumeration osd:label="Icelandic (Iceland)" value="is_IS"/>
+         <xs:enumeration osd:label="Italian" value="it"/>
+         <xs:enumeration osd:label="Italian (Switzerland)" value="it_CH"/>
+         <xs:enumeration osd:label="Italian (Italy)" value="it_IT"/>
+         <xs:enumeration osd:label="Italian (Italy,Euro)" value="it_IT_EURO"/>
+         <xs:enumeration osd:label="Hebrew" value="iw"/>
+         <xs:enumeration osd:label="Hebrew (Israel)" value="iw_IL"/>
+         <xs:enumeration osd:label="Japanese" value="ja"/>
+         <xs:enumeration osd:label="Japanese (Japan)" value="ja_JP"/>
+         <xs:enumeration osd:label="Korean" value="ko"/>
+         <xs:enumeration osd:label="Korean (South Korea)" value="ko_KR"/>
+         <xs:enumeration osd:label="Lithuanian" value="lt"/>
+         <xs:enumeration osd:label="Lithuanian (Lithuania)" value="lt_LT"/>
+         <xs:enumeration osd:label="Latvian (Lettish)" value="lv"/>
+         <xs:enumeration osd:label="Latvian (Lettish) (Latvia)" value="lv_LV"/>
+         <xs:enumeration osd:label="Macedonian" value="mk"/>
+         <xs:enumeration osd:label="Macedonian (Macedonia)" value="mk_MK"/>
+         <xs:enumeration osd:label="Dutch" value="nl"/>
+         <xs:enumeration osd:label="Dutch (Belgium)" value="nl_BE"/>
+         <xs:enumeration osd:label="Dutch (Belgium,Euro)" value="nl_BE_EURO"/>
+         <xs:enumeration osd:label="Dutch (Netherlands)" value="nl_NL"/>
+         <xs:enumeration osd:label="Dutch (Netherlands,Euro)" value="nl_NL_EURO"/>
+         <xs:enumeration osd:label="Norwegian" value="no"/>
+         <xs:enumeration osd:label="Norwegian (Norway)" value="no_NO"/>
+         <xs:enumeration osd:label="Norwegian (Norway,Nynorsk)" value="no_NO_NY"/>
+         <xs:enumeration osd:label="Polish" value="pl"/>
+         <xs:enumeration osd:label="Polish (Poland)" value="pl_PL"/>
+         <xs:enumeration osd:label="Portuguese" value="pt"/>
+         <xs:enumeration osd:label="Portuguese (Brazil)" value="pt_BR"/>
+         <xs:enumeration osd:label="Portuguese (Portugal)" value="pt_PT"/>
+         <xs:enumeration osd:label="Portuguese (Portugal,Euro)" value="pt_PT_EURO"/>
+         <xs:enumeration osd:label="Romanian" value="ro"/>
+         <xs:enumeration osd:label="Romanian (Romania)" value="ro_RO"/>
+         <xs:enumeration osd:label="Russian" value="ru"/>
+         <xs:enumeration osd:label="Russian (Russia)" value="ru_RU"/>
+         <xs:enumeration osd:label="Serbo-Croatian" value="sh"/>
+         <xs:enumeration osd:label="Serbo-Croatian (Yugoslavia)" value="sh_YU"/>
+         <xs:enumeration osd:label="Slovak" value="sk"/>
+         <xs:enumeration osd:label="Slovak (Slovakia)" value="sk_SK"/>
+         <xs:enumeration osd:label="Slovenian" value="sl"/>
+         <xs:enumeration osd:label="Slovenian (Slovenia)" value="sl_SI"/>
+         <xs:enumeration osd:label="Albanian" value="sq"/>
+         <xs:enumeration osd:label="Albanian (Albania)" value="sq_AL"/>
+         <xs:enumeration osd:label="Serbian" value="sr"/>
+         <xs:enumeration osd:label="Serbian (Yugoslavia)" value="sr_YU"/>
+         <xs:enumeration osd:label="Swedish" value="sv"/>
+         <xs:enumeration osd:label="Swedish (Sweden)" value="sv_SE"/>
+         <xs:enumeration osd:label="Thai" value="th"/>
+         <xs:enumeration osd:label="Thai (Thailand)" value="th_TH"/>
+         <xs:enumeration osd:label="Thai (Thailand,TH)" value="th_TH_TH"/>
+         <xs:enumeration osd:label="Turkish" value="tr"/>
+         <xs:enumeration osd:label="Turkish (Turkey)" value="tr_TR"/>
+         <xs:enumeration osd:label="Ukrainian" value="uk"/>
+         <xs:enumeration osd:label="Ukrainian (Ukraine)" value="uk_UA"/>
+         <xs:enumeration osd:label="Vietnamese" value="vi"/>
+         <xs:enumeration osd:label="Vietnamese (Vietnam)" value="vi_VN"/>
+         <xs:enumeration osd:label="Chinese" value="zh"/>
+         <xs:enumeration osd:label="Chinese (China)" value="zh_CN"/>
+         <xs:enumeration osd:label="Chinese (Hong Kong)" value="zh_HK"/>
+         <xs:enumeration osd:label="Chinese (Taiwan)" value="zh_TW"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="resource">
+      <xs:restriction base="xs:anyURI"/>
+   </xs:simpleType>
+   <xs:simpleType name="html">
+      <xs:restriction base="xs:string"/>
+   </xs:simpleType>
+   <xs:simpleType name="text">
+      <xs:restriction base="xs:string"/>
+   </xs:simpleType>
+   <xs:simpleType name="email">
+      <xs:restriction base="xs:string"/>
+   </xs:simpleType>
+   <xs:simpleType name="nomenclature">
+      <xs:restriction base="xs:string"/>
+   </xs:simpleType>
+   <xs:simpleType name="password">
+      <xs:restriction base="xs:string"/>
+   </xs:simpleType>
+   <xs:complexType name="UDA">
+      <xs:annotation>
+         <xs:documentation xml:lang="fr-FR">
+                Attribut(s) défini(s) par l'utilisateur
+            </xs:documentation>
+         <xs:documentation xml:lang="en-US">
+                User defined attribute(s)
+            </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="attribute" type="xs:string">
+            <xs:annotation>
+               <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:tableRef>
+                                <tablePath>//udaCatalog</tablePath>
+                            </osd:tableRef>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="value">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element minOccurs="0" name="xsString" type="xs:string"/>
+                  <xs:element minOccurs="0" name="xsBoolean" type="xs:boolean"/>
+                  <xs:element minOccurs="0" name="xsInt" type="xs:int"/>
+                  <xs:element minOccurs="0" name="xsDecimal" type="xs:decimal"/>
+                  <xs:element minOccurs="0" name="xsDateTime" type="xs:dateTime"/>
+                  <xs:element minOccurs="0" name="xsDate" type="xs:date"/>
+                  <xs:element minOccurs="0" name="xsTime" type="xs:time"/>
+                  <xs:element minOccurs="0" name="xsName" type="xs:Name"/>
+                  <xs:element minOccurs="0" name="xsAnyURI" type="xs:anyURI"/>
+                  <xs:element minOccurs="0" name="osdText" type="osd:text"/>
+                  <xs:element minOccurs="0" name="osdHtml" type="osd:html"/>
+                  <xs:element minOccurs="0" name="osdEmail" type="osd:email"/>
+                  <xs:element minOccurs="0" name="osdPassword" type="osd:password"/>
+                  <xs:element minOccurs="0" name="osdLocale" type="osd:locale"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="UDACatalog">
+      <xs:annotation>
+         <xs:appinfo>
+                <osd:table>
+                    <primaryKeys>/name</primaryKeys>
+                </osd:table>
+            </xs:appinfo>
+         <xs:documentation xml:lang="fr-FR">
+                Catalogue des attributs. Catalogue des attributs définis
+                par l'utilisateur.
+            </xs:documentation>
+         <xs:documentation xml:lang="en-US">
+                Attributes catalog. Catalog for user defined attributes.
+            </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="name" type="xs:Name"/>
+         <xs:element name="type">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value="xs:string"/>
+                  <xs:enumeration value="xs:boolean"/>
+                  <xs:enumeration value="xs:int"/>
+                  <xs:enumeration value="xs:decimal"/>
+                  <xs:enumeration value="xs:dateTime"/>
+                  <xs:enumeration value="xs:date"/>
+                  <xs:enumeration value="xs:time"/>
+                  <xs:enumeration value="xs:Name"/>
+                  <xs:enumeration value="xs:anyURI"/>
+                  <xs:enumeration value="osd:text"/>
+                  <xs:enumeration value="osd:html"/>
+                  <xs:enumeration value="osd:email"/>
+                  <xs:enumeration value="osd:password"/>
+                  <xs:enumeration value="osd:locale"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="documentation" osd:access="RW">
+            <xs:annotation>
+               <xs:documentation xml:lang="fr-FR">
+                        Libellé et description. Libellés et descriptions
+                        internationalisés, ils sont affichés à
+                        l'utilisateur de EBX.Manager.
+                    </xs:documentation>
+               <xs:documentation xml:lang="en-US">
+                        Label and description. Internationalized labels
+                        and descriptions, they are displayed to end user
+                        in EBX.Manager.
+                    </xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:annotation>
+                  <xs:documentation xml:lang="fr-FR">
+                            Libellé et description
+                        </xs:documentation>
+                  <xs:documentation xml:lang="en-US">
+                            Label and description
+                        </xs:documentation>
+               </xs:annotation>
+               <xs:sequence>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="localizedDocumentations">
+                     <xs:annotation>
+                        <xs:documentation xml:lang="fr-FR">
+                                    [locale]
+                                </xs:documentation>
+                        <xs:documentation xml:lang="en-US">
+                                    [locale]
+                                </xs:documentation>
+                     </xs:annotation>
+                     <xs:complexType>
+                        <xs:sequence>
+                           <xs:element name="locale" type="osd:locale">
+                              <xs:annotation>
+                                 <xs:documentation xml:lang="fr-FR">
+                                                Région
+                                            </xs:documentation>
+                                 <xs:documentation xml:lang="en-US">
+                                                Locale
+                                            </xs:documentation>
+                              </xs:annotation>
+                           </xs:element>
+                           <xs:element minOccurs="0" name="label" type="xs:string">
+                              <xs:annotation>
+                                 <xs:documentation xml:lang="fr-FR">
+                                                Libellé
+                                            </xs:documentation>
+                                 <xs:documentation xml:lang="en-US">
+                                                Label
+                                            </xs:documentation>
+                              </xs:annotation>
+                           </xs:element>
+                           <xs:element minOccurs="0" name="description">
+                              <xs:annotation>
+                                 <xs:documentation xml:lang="fr-FR">
+                                                Description
+                                            </xs:documentation>
+                                 <xs:documentation xml:lang="en-US">
+                                                Description
+                                            </xs:documentation>
+                              </xs:annotation>
+                              <xs:simpleType>
+                                 <xs:restriction base="xs:string">
+                                    <xs:maxLength value="99999"/>
+                                 </xs:restriction>
+                              </xs:simpleType>
+                           </xs:element>
+                        </xs:sequence>
+                     </xs:complexType>
+                  </xs:element>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>
